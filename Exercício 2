@@ -1,0 +1,67 @@
+<?php
+class Empregado{
+public $nome;
+public $sobrenome;
+public $salmes;
+public $salano;
+
+public function __construct(){
+$this-> nome = "Robson";
+$this-> sobrenome = "Siqueira da Silva";
+$this-> salmes = 1200.75;
+}
+public function setnome($recebe1){
+return $this->sobrenome = $recebe1;
+}
+public function getnome(){
+return $this ->nome;
+}
+public function setnome($recebe2){
+return $this->nome = $recebe2;
+}
+public function getsobrenome(){
+return $this ->sobrenome;
+}
+public function setsalmes($recebe3){
+return $this->salmes = $recebe3;
+}
+public function getsalmes(){
+return $this ->salmes;
+}
+public function setsalano(){
+
+return $this->salanu = $this->salmes*12;
+}
+public function getsalano(){
+return $this ->salano;
+}
+public function validasalmes(){
+if($this->salmen < 0){
+$this->salmen = 0.0;
+}
+}
+public function aumentasalmes(){
+$aum = ($this->salmes*10)/100;
+$this-> salmes = $this->salmes + $aum;
+}
+}
+//emprega1
+$emprega1 = new Empregados();
+$emprega1->validasalmes();
+$emprega1->setsalano();
+echo "O salario anual de {$emprega1-> getnome()} {$emprega1->getsobrenome()} é R$ {$emprega1->getsalano()}\n"; 
+$emprega1 -> aumentasalmes();
+$emprega1->setsalano();
+echo "O salario anual de {$emprega1-> getnome()} recebeu acrescimo de 10% e passou a ser de R$ {$emprega1->getsalano()} \n ";
+//emprega2
+$emprega2 = new Empregados();
+$emprega2 -> setnome("Lucas");
+$emprega2 -> setSnome("Silva");
+$emprega2->setsalmes(1000);
+$emprega2->validasalmes();
+$emprega2->setsalano();
+echo "O salario anual de {$emprega2-> getnome()} {$emprega2->getsobrenome()} é R$ {$emprega2->getsalano()} \n"; 
+$emprega2 -> aumentasalmes();
+$emprega2->setSalano();
+echo "O salario anual de {$emprega2-> getnome()} recebeu acréscimo de 10% e passou a ser de R$ {$emprega2->getsalano()} \n ";
+?>
