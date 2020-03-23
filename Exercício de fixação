@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>ATIVIDADE PROG</title>
+  </head>
+  <body>
+    <?php
+class Car{
+  public $mdl;
+  public $vlm;
+  public $vla;
+  
+  public function Car($mdl_, $vlm_){
+    $this-> mdl = $mdl_;
+    $this-> vlm = $vlm_;
+      echo "<br> {$this-> setMdl()} </br>";
+    $this-> ligCar();
+    $this-> acl();
+    $this-> rdz();
+    $this-> parCar();
+    $this-> dslCar();
+  }
+  
+  public function ligCar(){
+      echo "<br> Carro ligado </br>";
+  }
+  
+  public function dslCar(){
+    echo "<br> Carro desligado </br>";
+  }
+  
+  public function acl(){
+    $this-> vla = $this-> vlm;
+    echo "<br> Acelerando... </br>";
+    echo "<br> Velocidade ={$this->vla} km/h </br>";
+  }
+  
+  public function setMdl(){
+    return $this-> mdl;
+  }
+  
+  public function rdz(){
+    $this-> vla = $this->vla / 2;
+    echo "<br> Reduzindo velocidade! </br>";
+    echo "<br> Velocidade = {$this->vla} km/h <br>";
+  }
+  
+  public function parCar(){
+    $this-> vla = 0;
+    echo "<br> Carro Parado </br>";
+    echo "<br> Velocidade = {$this->vla} km/h </br>";
+  }
+
+}
+
+$car0 = new Car("BMW X",80);
+?>
